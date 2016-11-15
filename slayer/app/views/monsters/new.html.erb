@@ -1,0 +1,32 @@
+<h2>Create a new monster!</h2>
+<ul>
+  <%= form_for [@monster] do |f| %>
+  <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+  <br>
+  <li>
+    <%= f.label :habitat %>
+    <%= f.text_field :habitat %>
+  </li>
+  <br>
+  <li>
+    <%= f.label :health %>
+    <%= f.text_field :health %>
+  </li>
+  <br>
+  <li>
+    <%= f.label :photo %>
+    <%= f.text_field :img_url %>
+  </li>
+  <br>
+  <%= f.select(:hero_id) do %>
+<% [['Alexander', 1], ['Obama', 2]].each do |c| -%>
+  <%= content_tag(:option, c.first, value: c.last) %>
+<% end %>
+<% end %>
+  <br>
+    <%= f.submit "Create!"%>
+  <% end %>
+</ul>

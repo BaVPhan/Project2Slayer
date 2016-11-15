@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+img {
+  display: block;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  background-color: lightblue;
+}
+nav > a {
+  content: center;
+  padding: 10px;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: white;
+}
+
+body {
+  background-image: url("http://images.clipartpanda.com/sword-and-shield-black-and-white-Sword_and_Shield_original_by_angelfire7508.jpg");
+  background-size: 22%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right bottom;
+  z-index: -1;
+}
+
+.monster-photo {
+  height: 380px;
+  max-width: 460px;
+  max-height: 400px;
+  display: block;
+  margin: 120px 45px;
+}
+
+.hero-photo {
+  height: 380px;
+  max-width: 460px;
+  max-height: 400px;
+  display: block;
+  margin: 100px 15px;
+}

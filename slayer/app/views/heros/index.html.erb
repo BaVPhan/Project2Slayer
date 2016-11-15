@@ -1,0 +1,11 @@
+<h2>Add a new hero! <%= link_to "(+)", new_hero_path %></h2>
+
+<h3>Current Heroes:</h3>
+<ul>
+  <% @heros.each do |hero| %>
+    <li>
+      <%= link_to hero.name, hero %>
+    </li>
+    <br>
+  <% end %>
+</ul>
