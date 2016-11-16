@@ -1,4 +1,5 @@
-<h2><%= @hero.name %> <%= link_to "(Edit)", edit_hero_path(@hero) %></h2>
+<div class="content">
+<h2><%= @hero.name %> <%= link_to "(Edit Hero)", edit_hero_path(@hero) %></h2>
 <h4>Hero Power: <%= @hero.weapon_strength %></h4>
 
 <%= image_tag @hero.img_url, class: "hero-photo" %>
@@ -9,4 +10,4 @@
     <li><%= link_to "#{monster.name}", monster %></li>
   <% end %>
 </ul>
-<h3>Assign more monsters  <%= link_to "(+)", new_hero_monster_path(@hero, @monster) %></h3>
+</div>

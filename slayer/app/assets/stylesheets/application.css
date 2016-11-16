@@ -21,11 +21,11 @@ nav {
   display: flex;
   flex-direction: row;
   width: 100%;
-  align-items: center;
-  justify-content: center;
 }
 
 .navbar {
+  align-items: center;
+  justify-content: center;
   background-color: lightblue;
 }
 nav > a {
@@ -38,7 +38,16 @@ nav a:hover {
     color: white;
 }
 
+.alert{
+   color:#f00;
+}
+
+.notice{
+   color:#00f;
+}
+
 body {
+  font-family: 'Permanent Marker', cursive;
   background-image: url("http://images.clipartpanda.com/sword-and-shield-black-and-white-Sword_and_Shield_original_by_angelfire7508.jpg");
   background-size: 22%;
   background-repeat: no-repeat;

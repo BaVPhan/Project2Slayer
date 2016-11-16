@@ -1,0 +1,29 @@
+<div class="content">
+<h2>Edit Monsters</h2>
+<ul>
+  <%= form_for @monster do |f| %>
+    <li>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </li>
+    <br>
+    <li>
+      <%= f.label :habitat %>
+      <%= f.text_field :habitat %>
+    </li>
+    <br>
+    <li>
+      <%= f.label :health %>
+      <%= f.text_field :health %>
+    </li>
+    <br>
+    <li>
+      <%= f.label :photo %>
+      <%= f.text_field :img_url %>
+    </li>
+    <br>
+  <%= f.submit "Edit!"%>
+</ul>
+<% end %>
+<%= link_to "Delete!", @monster, method: :delete, class: "delete" %>
+</div>

@@ -6,11 +6,7 @@ Rails.application.routes.draw do
     resources :monsters, except: [:index, :show]
   end
 
-  resources :monsters, only: [:index, :show] do
-    member do
-      post 'add_favorite'
-      delete 'remove_favorite'
-    end
-  end
+  resources :monsters
   resources :users
+  resource :session
 end

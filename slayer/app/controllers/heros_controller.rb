@@ -4,18 +4,19 @@ class HerosController < ApplicationController
     @heros = Hero.all
   end
 
-  def show
-    @hero = Hero.find(params[:id])
-  end
-
   def new
+    redirect_to root_path unless @current_user
     @hero = Hero.new
   end
 
   def create
-    @hero = Hero.create!(hero_params)
-
+    @user = User.find(params[:id])
+    @hero = @user.heros.create!(hero_params)
     redirect_to @hero
+  end
+
+  def show
+    @hero = Hero.find(params[:id])
   end
 
   def edit
@@ -25,7 +26,6 @@ class HerosController < ApplicationController
   def update
     @hero = Hero.find(params[:id])
     @hero.update(hero_params)
-
     redirect_to @hero
   end
 

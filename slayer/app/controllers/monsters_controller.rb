@@ -5,24 +5,34 @@ class MonstersController < ApplicationController
   end
 
   def new
-    @hero = Hero.find(params[:hero_id])
+
     @monster = Monster.new
   end
 
   def create
-    @hero = Hero.find(params[:hero_id])
+
     @monster = Monster.create!(monster_params)
     redirect_to @monster
   end
 
-  def update
-    @hero = Hero.find(params[:id])
-    hero.update!(todo_params)
-    redirect_to hero_path(@hero)
-  end
-
   def show
     @monster = Monster.find(params[:id])
+  end
+
+  def edit
+    @monster = Monster.find(params[:id])
+  end
+
+  def update
+    @hero = Hero.find(params[:id])
+    @monster = @hero.monsters.update(monster_params)
+    redirect_to hero_monster_path(@monster)
+  end
+
+  def destroy
+    @monster = Monster.find(params[:id])
+    @monster.destroy
+    redirect_to monsters_path
   end
 
   private

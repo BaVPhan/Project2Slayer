@@ -1,0 +1,16 @@
+<h2>Sign In</h2>
+<ul>
+  <%= form_for @user, url: session_path, method: :post do |f| %>
+    <li>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </li>
+    <br>
+    <li>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </li>
+    <br>
+    <%= f.submit "Sign In" %>
+  <% end %>
+</ul>

@@ -1,5 +1,8 @@
-<h2><%= @monster.name %> <%= link_to "(Edit)", edit_hero_monster_path(@monster) %></h2>
+<div class="content">
+<h2><%= @monster.name %> <%= link_to "(Edit)", edit_monster_path(@monster) %></h2>
 <h4>Health Points: <%= @monster.health %></h4>
 <h4>Habitat: <%= @monster.habitat %></h4>
+<%= link_to "Delete this creature!", @monster, method: :delete, class: "delete" %>
 
 <%= image_tag @monster.img_url, class: "monster-photo" %>
+</div>
