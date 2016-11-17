@@ -31,7 +31,6 @@ class HerosController < ApplicationController
   def destroy
     @hero = Hero.find(params[:id])
     @hero.destroy
-
     redirect_to heros_path
   end
 

@@ -2,12 +2,12 @@
 <h2>Create Your Own Hero! <%= link_to("(+)", new_hero_path) if @current_user %></h2>
 
 <h3>Current Heroes:</h3>
-<ul>
+<ol>
   <% @heros.each do |hero| %>
     <li>
       <%= link_to hero.name, hero %>
     </li>
     <br>
   <% end %>
-</ul>
+</ol>
 </div>
