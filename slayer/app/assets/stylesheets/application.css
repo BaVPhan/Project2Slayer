@@ -17,16 +17,29 @@ img {
   display: block;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  position: static;
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+
 nav {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
+.slaybar{
+  justify-content: flex-end;
+}
+
 .navbar {
   align-items: center;
   justify-content: center;
-  background-color: lightblue;
+  background-color: grey;
 }
 nav > a {
   content: center;
@@ -36,14 +49,6 @@ nav > a {
 nav a:hover {
     background-color: #555;
     color: white;
-}
-
-.alert{
-   color:#f00;
-}
-
-.notice{
-   color:#00f;
 }
 
 body {
@@ -56,12 +61,16 @@ body {
   z-index: -1;
 }
 
+h1 {
+  font-size: 25px;
+}
+
 .monster-photo {
   height: 380px;
   max-width: 460px;
   max-height: 400px;
   display: block;
-  margin: 120px 45px;
+  margin: 10px 5px;
 }
 
 .hero-photo {
@@ -69,5 +78,5 @@ body {
   max-width: 460px;
   max-height: 400px;
   display: block;
-  margin: 100px 15px;
+  margin: 10px 5px;
 }

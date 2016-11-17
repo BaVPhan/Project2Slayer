@@ -4,21 +4,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-  input_username = params[:user][:username]   
+  input_username = params[:user][:username]
     if User.exists?(username: input_username)
-      @user = User.find_by(username: input_username)  # Find that user
+      @user = User.find_by(username: input_username)
 
-      # If the password submitted through the form is correct...
       if @user.password == params[:user][:password]
         flash[:notice] = "You're signed in!"
-        session[:user_id] = @user.id  # Set the session user_id to that of the user trying to log in
-        redirect_to root_path   # Send them back to the app
+        session[:user_id] = @user.id
+        redirect_to root_path
       else
-        flash[:alert] = "Wrong password!"
-        redirect_to new_session_path  # Send them back to the sign-in form
+        flash[:alert] = "Wrong username or password!"
+        redirect_to new_session_path
       end
-
-    # Otherwise, send them back to the sign-in form so they can enter a valid username-password combination
     else
       flash[:alert] = "That user doesn't exist!"
       redirect_to new_session_path
@@ -26,8 +23,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    reset_session   # Delete all sessions
+    reset_session
     flash[:alert] = "You're signed out!"
-    redirect_to :root   # Send the user back to the homepage
+    redirect_to :root
   end
 end

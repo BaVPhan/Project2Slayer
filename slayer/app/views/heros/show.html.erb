@@ -1,11 +1,11 @@
 <div class="content">
-<h2><%= @hero.name %> <%= link_to "(Edit Hero)", edit_hero_path(@hero) %></h2>
+<h2><%= @hero.name %> <%= link_to "(Edit Hero)", edit_hero_path(@hero) if @current_user %></h2>
 <h4>Hero Power: <%= @hero.weapon_strength %></h4>
 
 <%= image_tag @hero.img_url, class: "hero-photo" %>
 
 <ul>
-  <p><%= @hero.name %> will be fighting: </p>
+  <p><%= @hero.name %> will be slaying : </p>
   <% @hero.monsters.each do |monster| %>
     <li><%= link_to "#{monster.name}", monster %></li>
   <% end %>

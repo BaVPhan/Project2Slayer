@@ -8,8 +8,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Anton|Permanent+Marker" rel="stylesheet">
   </head>
-  <h1><%= link_to "Slay.R", root_url %></h1>
-  <nav>
+  <nav class = "slaybar">
+    <img src="<%= asset_path( 'hammer.png' ) %>" alt="hammer logo" style="width:50px;height:50px;"/>
+    <h1><%= link_to "Slay.R", root_url %></h1>
+    <img src="<%= asset_path( 'sword.png' ) %>" alt="sword logo" style="width:50px;height:50px;"/>
+  </nav>
+  <nav class="slaybar">
   <% if @current_user %>
     <%= link_to "Welcome, #{@current_user.username}!", user_path(@current_user) %>
     <%= link_to "Sign Out", session_path, method: :delete %>
@@ -24,9 +28,12 @@
   <nav class="navbar">
     <%= link_to "Monsters", monsters_path %>
     <%= link_to "Heroes", heros_path %>
-    <%= link_to "Users", users_path %>
+    <%= link_to "Existing Users", users_path %>
   </nav>
   <body>
     <%= yield %>
   </body>
+  <footer>
+    <p> Created by: Ba Phan</p>
+  </footer>
 </html>

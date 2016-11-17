@@ -10,8 +10,7 @@ class HerosController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:id])
-    @hero = @user.heros.create!(hero_params)
+    @hero = Hero.create!(hero_params)
     redirect_to @hero
   end
 

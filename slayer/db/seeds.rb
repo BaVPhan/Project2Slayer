@@ -22,4 +22,9 @@ rihanna = Hero.create(name: "Goddess Rihanna", weapon_strength: 60, img_url: "ht
 alexander.monsters.create!({name: "Da Kraken", habitat: "Ocean", health: 200, img_url: "http://img.finalfantasyxiv.com/lds/promo/pc/global/images/special/2_3_Defenders_of_Eorzea/dungeons/visual_02.png?484f51av1"})
 obama.monsters.create!({name: "Black Dragon", habitat: "Mountain", health: 250, img_url: "http://ffe.hendersongdi.com/ff2/psp/blackdragon.gif"})
 james.monsters.create!({name: "Godzilla", habitat: "Rain Forrest", health: 220, img_url: "http://40.media.tumblr.com/tumblr_m5tii38WQf1ru09vqo1_1280.png"})
-obama.monsters.create!({name: "Clifford the Hellhound", habitat: "Washington DC", health: 190, img_url: "http://orig00.deviantart.net/4449/f/2013/134/a/6/clifford_the_big_red_dog_for_mugen_sprite_by_neopets2012-d659p34.png"})
+rihanna.monsters.create!({name: "Clifford the Hellhound", habitat: "Washington DC", health: 190, img_url: "http://orig00.deviantart.net/4449/f/2013/134/a/6/clifford_the_big_red_dog_for_mugen_sprite_by_neopets2012-d659p34.png"})
+
+obama.monsters.create!({name: "Giant Griffin", habitat: "The Sky", health: 300, img_url: "http://vignette1.wikia.nocookie.net/family-guy-the-quest-for-stuff/images/2/2e/Giant_chicken_animation.png/revision/20160325131501"})
+james.monsters.create!({name: "Death Worm", habitat: "Desert", health: 275, img_url: "http://orig11.deviantart.net/d694/f/2008/297/5/5/sandworm_for_kobold_quarterly_by_michaeljaecks.jpg"})
+alexander.monsters.create!({name: "King Rex", habitat: "Flat Plains", health: 325, img_url: "https://www.models-resource.com/resources/big_icons/4/3035.png"})
+rihanna.monsters.create!({name: "Stone Golem", habitat: "Caves", health: 200, img_url: "http://www.vgmuseum.com/mrp/cv-loi/enemies/golem.png"})
