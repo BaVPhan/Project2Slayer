@@ -1,0 +1,13 @@
+<div class="content">
+<h2>Create a new monster! <%= link_to("(+)", new_monster_path) if @current_user %></h2>
+
+<h3>Existing Monsters:</h3>
+<ul>
+  <% @monsters.each do |monster| %>
+    <li>
+      <%= link_to monster.name, monster %>
+    </li>
+    <br>
+  <% end %>
+</ul>
+</div>

@@ -1,0 +1,18 @@
+<h2>Edit Your Profile</h2>
+<ul>
+  <%= form_for @user do |f| %>
+    <li>
+      <%= f.label :set_new_username %>
+      <%= f.text_field :username %>
+    </li>
+    <br>
+    <li>
+      <%= f.label :set_new_password %>
+      <%= f.password_field :password %>
+    </li>
+    <br>
+    <%= f.submit "Submit" %>
+  <% end %>
+</ul>
+
+<%= link_to "Delete!", @user, method: :delete, class: "delete" %>

@@ -1,0 +1,32 @@
+<div class="content">
+<h2>Create a new monster!</h2>
+  <ul>
+    <%= form_for [@monster] do |f| %>
+    <li>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </li>
+    <br>
+    <li>
+      <%= f.label :habitat %>
+      <%= f.text_field :habitat %>
+    </li>
+    <br>
+    <li>
+      <%= f.label :health_points%>
+      <%= f.text_field :health %>
+    </li>
+    <br>
+    <li>
+      <%= f.label :photo %>
+      <%= f.text_field :img_url %>
+    </li>
+    <br>
+    <li>
+      Assign to: <%= f.collection_select :hero_id, Hero.order(:name),:id,:name, include_blank: false %>
+    </li>
+    <br>
+      <%= f.submit "Create!"%>
+  </ul>
+<% end %>
+</div>
