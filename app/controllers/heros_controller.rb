@@ -1,10 +1,16 @@
 class HerosController < ApplicationController
+  # you can dry this section up with a before_action method
+  # i.e. before_action :set_hero, except: [:index, :new, :create]
+  # def set_hero
+  #   Hero.find(params[:id])
+  # end
 
   def index
     @heros = Hero.all
   end
 
   def new
+    # nice and concise login check! love this style over the other
     redirect_to root_path unless @current_user
     @hero = Hero.new
   end

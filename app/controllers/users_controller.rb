@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-
+  # nice handrolled users & sessions
   def index
+    # you may want to add an is_admin row/attribute to users and maybe all users only viewable by an admin
     @users = User.all
   end
 
