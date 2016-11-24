@@ -1,5 +1,5 @@
 class MonstersController < ApplicationController
-
+  # see other controller for comment about DRYing up code with before_action
   def index
     @monsters = Monster.all
   end
